@@ -51,7 +51,7 @@ t_board	**array_alloc(int width, int height, char *map)
 		return (NULL);
 	while (i < height)
 	{
-		array[i] = malloc((width) * sizeof(t_board));
+		array[i] = malloc((width + 1) * sizeof(t_board));
 		if (!array[i])
 			return (cleaner(array));
 		i++;
@@ -62,10 +62,10 @@ t_board	**array_alloc(int width, int height, char *map)
 
 t_board	**map_builder(char *map)
 {
-	int		fd;
-	int		width;
-	int		height;
-	char	*line;
+	int			fd;
+	char		*line;
+	static int	height;
+	static int	width;
 
 	height = 0;
 	fd = open(map, O_RDONLY);

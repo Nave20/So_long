@@ -17,6 +17,8 @@
 int	main(int argc, char **argv)
 {
 	t_board	**test;
+	int		height;
+	int		width;
 
 	if (argc != 2)
 	{
@@ -25,7 +27,10 @@ int	main(int argc, char **argv)
 	}
 	test = map_builder(argv[1]);
 	if (test)
+	{
+		printer(test);
 		cleaner(test);
+	}
 	else
 		ft_printf("test2");
 	return (0);

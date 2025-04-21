@@ -40,4 +40,7 @@ t_board	**map_builder(char *map);
 //--------------------------------ERROR--------------------------------
 t_board	**cleaner(t_board **str);
 
+//---------------------------------DEV---------------------------------
+void	printer(t_board **map);
+
 #endif

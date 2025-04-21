@@ -1,6 +1,7 @@
 SOURCES =	so_long.c 			\
 			so_long_parsing.c	\
 			so_long_error.c		\
+			so_long_dev.c		\
 
 OBJS	=	${SOURCES:%.c=${OBJDIR}%.o}
 

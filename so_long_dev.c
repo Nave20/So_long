@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long_error.c                                    :+:      :+:    :+:   */
+/*   so_long_dev.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpirotti <vpirotti@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/10 01:46:56 by vpirotti          #+#    #+#             */
-/*   Updated: 2025/04/10 01:46:56 by vpirotti         ###   ########.fr       */
+/*   Created: 2025/04/21 17:06:07 by vpirotti          #+#    #+#             */
+/*   Updated: 2025/04/21 17:06:07 by vpirotti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-// int	border_check(t_board **map, int	height, int width)
-// {
-// 	int	i;
-//
-// 	i = 0;
-// 	while ()
-// }
-
-t_board	**cleaner(t_board **str)
+void	printer(t_board **map)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	if (!str)
-		return (NULL);
-	while (str[i])
+	while (map[i])
 	{
-		free(str[i]);
+		j = 0;
+		while (map[i][j].type)
+		{
+			ft_printf("%c ", map[i][j]);
+			j++;
+		}
+		ft_printf("\n");
 		i++;
 	}
-	free(str);
-	return (NULL);
 }
