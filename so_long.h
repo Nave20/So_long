@@ -14,6 +14,11 @@
 # define SO_LONG_H
 
 # define RESET "\033[H\033[J"
+# define YELLOW "\033[33m"
+# define WHITE "\033[0m"
+# define BLUE "\033[34m"
+# define CYAN "\033[36m"
+# define RED "\033[31m"
 
 //-------------------------------INCLUDE-------------------------------
 # include <stdio.h>

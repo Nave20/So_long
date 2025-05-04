@@ -80,9 +80,9 @@ int	d_mech(void *param, int *item, int *step)
 		(*item)++;
 	else if (temp == 28 && *item == content->game.item_t)
 	{
-		ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
-		ft_printf("\033[36mVictory, you've gathered : \033[33m%d\033[36m "
-			"item(s)\033[0m\n", *item);
+		ft_printf(RESET"step -> "YELLOW"%d"WHITE"\n", (*step)++);
+		ft_printf(CYAN"Victory, you've gathered : "YELLOW"%d"CYAN
+			"item(s)"WHITE"\n", *item);
 		exit_all(content);
 	}
 	return (temp);

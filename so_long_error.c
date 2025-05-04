@@ -14,14 +14,14 @@
 
 void	malloc_error(void)
 {
-	ft_putendl_fd("\033[31mAn allocation of fd error occured.\033[0m", 2);
+	ft_putendl_fd(RED"An allocation of fd error occured."WHITE, 2);
 	exit(EXIT_FAILURE);
 }
 
 void	parsing_error(void)
 {
-	ft_putendl_fd("\033[31mThe provided map isn't valid.\033[0m", 2);
-	ft_putendl_fd("\033[31mPlease fix it !\033[0m", 2);
+	ft_putendl_fd(RED"The provided map isn't valid."WHITE, 2);
+	ft_putendl_fd(RED"Please fix it !"WHITE, 2);
 	exit(EXIT_FAILURE);
 }
 

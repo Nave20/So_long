@@ -19,7 +19,7 @@ void	exit_all_error(void *param)
 	content = (t_mmlx *)param;
 	destroy_images(content->game);
 	exit_mlx(content->game.mlx, content->game.win, content->map);
-	printf("\033[31mWhoops, something went wrong\033[0m\n");
+	printf(RED"Whoops, something went wrong"WHITE"\n");
 	exit(EXIT_FAILURE);
 }
 
@@ -40,14 +40,14 @@ t_game	exit_mlx_1(t_game game)
 void	exit_map(t_board **map)
 {
 	cleaner(map);
-	printf("\033[31mYour map is too big.\033[0m\n");
-	printf("\033[31mPlease fix it !.\033[0m\n");
+	printf(RED"Your map is too big."WHITE"\n");
+	printf(RED"Please fix it !."WHITE"\n");
 	exit(EXIT_FAILURE);
 }
 
 void	exit_wrong(t_board **map)
 {
 	cleaner(map);
-	printf("\033[31mWhoops, something went wrong\033[0m\n");
+	printf(RED"Whoops, something went wrong"WHITE"\n");
 	exit(EXIT_FAILURE);
 }

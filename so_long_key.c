@@ -21,22 +21,22 @@ void	mechanics(int keycode, void *param, int *step)
 	if (keycode == 'w')
 	{
 		if (w_mech(content, &item, step) != -1)
-			ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
+			ft_printf(RESET"step -> "YELLOW"%d"WHITE"\n", (*step)++);
 	}
 	else if (keycode == 's')
 	{
 		if (s_mech(content, &item, step) != -1)
-			ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
+			ft_printf(RESET"step -> "YELLOW"%d"WHITE"\n", (*step)++);
 	}
 	else if (keycode == 'a')
 	{
 		if (a_mech(content, &item, step) != -1)
-			ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
+			ft_printf(RESET"step -> "YELLOW"%d"WHITE"\n", (*step)++);
 	}
 	else if (keycode == 'd')
 	{
 		if (d_mech(content, &item, step) != -1)
-			ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
+			ft_printf(RESET"step -> "YELLOW"%d"WHITE"\n", (*step)++);
 	}
 }
 
@@ -48,7 +48,7 @@ int	handle_key(int keycode, void *param)
 	content = (t_mmlx *)param;
 	if (keycode == 65307)
 	{
-		ft_printf("\033[34mGame closed.\033[0m\n");
+		ft_printf(BLUE"Game closed."WHITE"\n");
 		exit_all(content);
 	}
 	if (keycode == 'w' || keycode == 's' || keycode == 'a' || keycode == 'd')
