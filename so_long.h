@@ -13,6 +13,8 @@
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
+# define RESET "\033[H\033[J"
+
 //-------------------------------INCLUDE-------------------------------
 # include <stdio.h>
 # include <fcntl.h>
@@ -119,9 +121,9 @@ void		destroy_images(t_game game);
 
 //---------------------------------KEY---------------------------------
 int			handle_key(int keycode, void *param);
-int			w_mech(void *param, int *item);
-int			a_mech(void *param, int *item);
-int			s_mech(void *param, int *item);
-int			d_mech(void *param, int *item);
+int			w_mech(void *param, int *item, int *step);
+int			a_mech(void *param, int *item, int *step);
+int			s_mech(void *param, int *item, int *step);
+int			d_mech(void *param, int *item, int *step);
 
 #endif

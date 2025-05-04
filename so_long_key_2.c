@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-int	w_mech(void *param, int *item)
+int	w_mech(void *param, int *item, int *step)
 {
 	t_mmlx		*content;
 	int			temp;
@@ -23,6 +23,7 @@ int	w_mech(void *param, int *item)
 		(*item)++;
 	else if (temp == 28 && *item == content->game.item_t)
 	{
+		ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
 		ft_printf("\033[36mVictory, you've gathered : \033[33m%d\033[36m "
 			"item(s)\033[0m\n", *item);
 		exit_all(content);
@@ -30,7 +31,7 @@ int	w_mech(void *param, int *item)
 	return (temp);
 }
 
-int	a_mech(void *param, int *item)
+int	a_mech(void *param, int *item, int *step)
 {
 	t_mmlx		*content;
 	int			temp;
@@ -41,6 +42,7 @@ int	a_mech(void *param, int *item)
 		(*item)++;
 	else if (temp == 28 && *item == content->game.item_t)
 	{
+		ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
 		ft_printf("\033[36mVictory, you've gathered : \033[33m%d\033[36m "
 			"item(s)\033[0m\n", *item);
 		exit_all(content);
@@ -48,7 +50,7 @@ int	a_mech(void *param, int *item)
 	return (temp);
 }
 
-int	s_mech(void *param, int *item)
+int	s_mech(void *param, int *item, int *step)
 {
 	t_mmlx		*content;
 	int			temp;
@@ -59,6 +61,7 @@ int	s_mech(void *param, int *item)
 		(*item)++;
 	else if (temp == 28 && *item == content->game.item_t)
 	{
+		ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
 		ft_printf("\033[36mVictory, you've gathered : \033[33m%d\033[36m "
 			"item(s)\033[0m\n", *item);
 		exit_all(content);
@@ -66,7 +69,7 @@ int	s_mech(void *param, int *item)
 	return (temp);
 }
 
-int	d_mech(void *param, int *item)
+int	d_mech(void *param, int *item, int *step)
 {
 	t_mmlx		*content;
 	int			temp;
@@ -77,6 +80,7 @@ int	d_mech(void *param, int *item)
 		(*item)++;
 	else if (temp == 28 && *item == content->game.item_t)
 	{
+		ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
 		ft_printf("\033[36mVictory, you've gathered : \033[33m%d\033[36m "
 			"item(s)\033[0m\n", *item);
 		exit_all(content);

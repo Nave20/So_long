@@ -20,23 +20,23 @@ void	mechanics(int keycode, void *param, int *step)
 	content = (t_mmlx *)param;
 	if (keycode == 'w')
 	{
-		if (w_mech(content, &item) != -1)
-			ft_printf("step -> \033[33m%d\033[0m\n", (*step)++);
+		if (w_mech(content, &item, step) != -1)
+			ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
 	}
 	else if (keycode == 's')
 	{
-		if (s_mech(content, &item) != -1)
-			ft_printf("step -> \033[33m%d\033[0m\n", (*step)++);
+		if (s_mech(content, &item, step) != -1)
+			ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
 	}
 	else if (keycode == 'a')
 	{
-		if (a_mech(content, &item) != -1)
-			ft_printf("step -> \033[33m%d\033[0m\n", (*step)++);
+		if (a_mech(content, &item, step) != -1)
+			ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
 	}
 	else if (keycode == 'd')
 	{
-		if (d_mech(content, &item) != -1)
-			ft_printf("step -> \033[33m%d\033[0m\n", (*step)++);
+		if (d_mech(content, &item, step) != -1)
+			ft_printf(RESET"step -> \033[33m%d\033[0m\n", (*step)++);
 	}
 }
 
