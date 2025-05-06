@@ -19,6 +19,7 @@
 # include <stdarg.h>
 # include <stdio.h>
 # include <errno.h>
+
 typedef struct s_list
 {
 	void			*content;
