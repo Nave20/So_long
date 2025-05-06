@@ -81,6 +81,7 @@ int	main(int argc, char **argv)
 	t_board	**map;
 	t_game	game;
 	t_mmlx	content;
+
 	if (argc != 2)
 	{
 		ft_arg_error();

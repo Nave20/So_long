@@ -45,15 +45,20 @@ void	draw_map(t_board **map, t_game game, int i, int j)
 		while (map[i][j].type)
 		{
 			if (map[i][j].type == '1')
-				mlx_put_image_to_window(game.mlx, game.win, game.spr_wall, j * 32, i * 32);
+				mlx_put_image_to_window(game.mlx, game.win,
+					game.spr_wall, j * 32, i * 32);
 			else if (map[i][j].type == '0')
-				mlx_put_image_to_window(game.mlx, game.win, game.spr_floor, j * 32, i * 32);
+				mlx_put_image_to_window(game.mlx,
+					game.win, game.spr_floor, j * 32, i * 32);
 			else if (map[i][j].type == 'P')
-				mlx_put_image_to_window(game.mlx, game.win, game.spr_player, j * 32, i * 32);
+				mlx_put_image_to_window(game.mlx, game.win,
+					game.spr_player, j * 32, i * 32);
 			else if (map[i][j].type == 'E')
-				mlx_put_image_to_window(game.mlx, game.win, game.spr_exit, j * 32, i * 32);
+				mlx_put_image_to_window(game.mlx, game.win,
+					game.spr_exit, j * 32, i * 32);
 			else if (map[i][j].type == 'C')
-				mlx_put_image_to_window(game.mlx, game.win, game.spr_item, j * 32, i * 32);
+				mlx_put_image_to_window(game.mlx, game.win,
+					game.spr_item, j * 32, i * 32);
 			j++;
 		}
 		i++;
@@ -64,11 +69,11 @@ t_game	texture(t_board **map, t_game game)
 {
 	game.height = map_size_h(map);
 	game.width = map_size_w(map);
-
 	game.mlx = mlx_init();
 	if (!game.mlx)
 		exit_wrong(map);
-	game.win = mlx_new_window(game.mlx, game.width * 32, game.height * 32, "so_long");
+	game.win = mlx_new_window(game.mlx,
+			game.width * 32, game.height * 32, "so_long");
 	if (!game.win)
 	{
 		mlx_destroy_display(game.mlx);

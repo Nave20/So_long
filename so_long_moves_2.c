@@ -22,7 +22,7 @@ int	move_a2(t_board **map, t_player p)
 
 int	move_a(t_board **map)
 {
-	t_player p;
+	t_player	p;
 
 	p = player(map);
 	if (map[p.i][p.j - 1].type == '1')
@@ -56,7 +56,7 @@ int	move_d2(t_board **map, t_player p)
 
 int	move_d(t_board **map)
 {
-	t_player p;
+	t_player	p;
 
 	p = player(map);
 	if (map[p.i][p.j + 1].type == '1')

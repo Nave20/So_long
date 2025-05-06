@@ -14,7 +14,7 @@
 
 void	old_p(t_board **map)
 {
-	t_player p;
+	t_player	p;
 
 	p = player(map);
 	map[p.i][p.j].old = '0';
@@ -30,7 +30,7 @@ int	move_w2(t_board **map, t_player p)
 
 int	move_w(t_board **map)
 {
-	t_player p;
+	t_player	p;
 
 	p = player(map);
 	if (map[p.i - 1][p.j].type == '1')
@@ -64,7 +64,7 @@ int	move_s2(t_board **map, t_player p)
 
 int	move_s(t_board **map)
 {
-	t_player p;
+	t_player	p;
 
 	p = player(map);
 	if (map[p.i + 1][p.j].type == '1')
